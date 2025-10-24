@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub: Build and ship software on a single, collaborative platform</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: #fff;
+}
+
+header {
+    background: #161b22;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 3%;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 2%;
+}
+
+.btn {
+    padding: 1% 3%;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #238636;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #21262d;
+    color: #fff;
+}
+
+.hero {
+    padding: 8% 5%;
+    text-align: center;
+    background: #0d1117;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 3%;
+}
+
+.hero-subtitle {
+    font-size: 1.3em;
+    color: #7d8590;
+    margin-bottom: 5%;
+}
+
+.email-signup {
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.email-input {
+    width: 40%;
+    padding: 1.5%;
+    background: #161b22;
+    border: 1px solid #30363d;
+    color: #fff;
+    font-size: 1em;
+}
+
+.btn-signup {
+    padding: 1.5% 4%;
+    background: #238636;
+    color: #fff;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.hero-note {
+    color: #7d8590;
+}
+
+.features {
+    padding: 8% 5%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4%;
+    margin-top: 5%;
+}
+
+.feature-card {
+    background: #161b22;
+    padding: 5%;
+}
+
+.feature-icon {
+    width: 15%;
+    background: #238636;
+    padding: 3%;
+    margin-bottom: 4%;
+    font-size: 1.5em;
+}
+
+.feature-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 3%;
+}
+
+.feature-card p {
+    color: #7d8590;
+    line-height: 1.6;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 2%;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2em;
+    color: #7d8590;
+}
+
+.collaboration {
+    padding: 8% 5%;
+    background: #161b22;
+}
+
+.collab-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 5% auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    align-items: center;
+}
+
+.collab-text h3 {
+    font-size: 2em;
+    margin-bottom: 3%;
+}
+
+.collab-text p {
+    color: #7d8590;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.collab-visual {
+    background: #0d1117;
+    padding: 10%;
+    text-align: center;
+    font-size: 3em;
+}
+
+.stats {
+    padding: 8% 5%;
+    text-align: center;
+}
+
+.stats-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: 5% auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4%;
+}
+
+.stat-item {
+    padding: 5%;
+}
+
+.stat-number {
+    font-size: 3em;
+    font-weight: bold;
+    color: #238636;
+    margin-bottom: 2%;
+}
+
+.stat-label {
+    color: #7d8590;
+    font-size: 1.1em;
+}
+
+footer {
+    padding: 6% 5%;
+    background: #161b22;
+    text-align: center;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    margin-bottom: 3%;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #7d8590;
+    text-decoration: none;
+}
+
+.footer-text {
+    color: #7d8590;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .email-input {
+        width: 100%;
+    }
+    
+    .email-signup {
+        flex-direction: column;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .collab-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    nav {
+        display: none;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span>GitHub</span>
+        </div>
+        <nav>
+            <a href="#Incio">Inicio</a>
+            <a href="#Recursos">Recursos</a>
+            <a href="#Repositorios">Repositorios</a>
+            <a href="#">Web</a>
+            <a href="#">Empresa</a>
+            <a href="#">Persona</a>
+        </nav>
+        <div class="header-buttons">
+            <a href="#" class="btn btn-secondary">Iniciar sesión</a>
+            <a href="#" class="btn btn-primary">Iniciar sesión</a>
+        </div>
+    </header>
+
+    <section class="hero" id="Inicio">
+        <div class="hero-content">
+            <h1>Cree y envíe software en una única plataforma colaborativa</h1>
+            <p class="hero-subtitle">JÚnase a la plataforma de desarrollo impulsada por IA más adoptada del mundo, donde millones de desarrolladores y empresas crean, envían y mantienen software.</p>
+            <div class="email-signup">
+                <input type="email" class="email-input" placeholder="Email address">
+                <a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fdashboard"><button class="btn-signup">Regístrate en GitHub</button></a>
+            </div>
+            <p class="hero-note">Gratis para particulares • No se requiere tarjeta de crédito</p>
+        </div>
+    </section>
+
+    <section class="features" id="Recursos">
+        <h2 class="section-title">Todo lo que necesitas para enviar código</h2>
+        <p class="section-subtitle">Cree, escale y entregue software seguro con GitHub</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Google Maps</h3>
+                <p><iframe style="width: 80%;height: 80%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255347.67052118704!2d-78.4891904!3d-0.13434879999999175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5bd12538eb13b%3A0x907c61f1abbe45ab!2sUniversidad%20de%20las%20Fuerzas%20Armadas%20ESPE!5e0!3m2!1ses-419!2sec!4v1761264164497!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Securidad</h3>
+                <p>Encuentra y busca vulnerabilidades</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Actiones</h3>
+                <p>Automatiza tu espacio de trabajo</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Espacios de codigo</h3>
+                <p>Construye y crea en un ambiente diseñado para programadores</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Collaboration</h3>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                •	<meter>
+                    <h2>Barra de progreso de lectura</h2>
+                        <progress value="70" max="100"></progress>
+                        <p>Nivel de batería de ejemplo</p>
+                    <meter value="0.6" min="0" max="1">60%</meter>
+            </div>
+        </div>
+    </section>
+
+    <section class="collaboration" id="Repositorios">
+        <h2 class="section-title">Repositorios</h2>
+        <p class="section-subtitle">Aprende a trabajar con Repositorios</p>
+        
+        <div class="collab-content">
+            <div class="collab-text">
+                <h3>Pdf</h3>
+
+            </div>
+            
+        </div>
+        <details>
+            <summary><h3>Capítulo 1: Multimedia Avanzada</h3> </summary>
+                 <p class="section-subtitle" style="float: left;font-size: medium;">HTML permite incrustar videos, PDFs y contenido externo.</p>
+
+        <details style="font-size: 1.2em;">
+            <summary> <p class="section-subtitle">Ejemplo de PDF incrustado <br> </p></summary>
+             <object data="github.pdf" type="application/pdf" width="100%" height="600px">
+                Tu navegador no soporta PDFs. Puedes 
+                <a href="manual.pdf" target="_blank">descargarlo aquí</a>.
+            </object>
+             </details>
+        </details>
+
+
+        </section>
+
+  
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Producto</a>
+                <a href="#">Figuras</a>
+                <a href="#">Seguridad</a>
+                <a href="#">Team</a>
+                <a href="#">Empresa</a>
+                <a href="#">Historias</a>
+                <a href="#">Practica</a>
+                <a href="#">Recurosos</a>
+            </div>
+            <p class="footer-text">© 2025 GitHub, Inc.</p>
+        </div>
+        <dialog open>
+                    <p >Este es un mensaje modal usando solo HTML5.</p>
+                    <p >Se cierra agregando/removiendo el atributo <code>open</code>.</p>
+                </dialog>
+
+    </footer>
+</body>
+</html>
